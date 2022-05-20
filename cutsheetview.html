@@ -10,43 +10,56 @@
 
 <body>
 
-    <p>Cut sheet functions on their way....</p>
-    <p>use browsers backspace arrow to return.</p>
-
-    <form action="viewchoice.html" method="GET">  
+    <form>  
         
-        <label for="sheet-select">Choose a sheet:</label>
+        <label for="sheet-select">what shall we do?</label>
 
-            <select id="sheet-select" name="choice">
-                <option value="make">Make new sheet</option>
-                <option value="view">View existing sheet</option>
-                <option value="copy">Copy existing sheet to new</option>
-                <option value="modify">Modify existing sheet</option>
+            <select id="sheet-select" onchange="show_selection()" name="choice">
+                <option disabled value="make">Make new sheet</option>
+                <option disabled value="view">View existing sheet</option>
+                <option disabled value="copy">Copy existing sheet to new</option>
+                <option disabled value="modify">Modify existing sheet</option>
                 <option value="m1">View mockup 1</option>
                 <option value="m2">View mockup 2</option>
                 <option value="mb">View mockup blank</option>  
             </select>
 
-            <div>
-                <button>GO</button>
-            </div>
-<script>
-    document.querySelector('#choice').value
-    console.log('#choice')
-</script>
-           <p>
-               choice is: (sheet-select)
-           </p>
+            <p></p>   
 
+            <p id="selection"></p>
+
+            <script>
+                function show_selection() {
+                    var x = document.getElementById("sheet-select").value;
+                    document.getElementById("selection").innerHTML = "Choice was " + x; }
+            </script>
+
+            <!-- will use JS, if-then, later to select -->
+
+            <div>
+                <a href="m1.html"
+                    <button name="m1" type="button">view mockup 1</button>
+                </a>
+
+                <div></div>
+
+                <a href="m2.html"
+                    <button name="m2" type="button">view mockup 2</button>
+                </a>
+
+                <div></div>
+
+                <a href="mb.html"
+                    <button name="mb" type="button">view blank mockup</button>
+                </a>
+            </div>
+            
         </label>
-        
-        
-        <p>sheet-select</p>
-                  
+         
     </form>
         
-    <button disabled name="view_existing_button"    type="button">View Existing</button>
-    <button disabled name="modify_existing_button" type="button">Modify Existing</button>
+    <button disabled name="save_and_send" type="button">Save cut sheet and send</button>
+    <button disabled name="save only" type="button">Save (still modifing)</button>
 
 </body>
     
