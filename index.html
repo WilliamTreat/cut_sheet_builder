@@ -13,10 +13,9 @@
     <form>
 
        <label for="employee_name" >Employee Name</label> 
-            <select  id="employee_name" required>
+            <select id="employee_name" onchange="show_selection()" required>
 
                 <optgroup label="Installers">
-                    <option value="" aria-placeholder="who be you?" disabled selected hidden></option>
                     <option>Brad</option>
                     <option>Chris</option>
                     <option>Cory</option>
@@ -38,13 +37,18 @@
                     <option>Jodie</option>
                     <option>Justin T</option>
                 </optgroup>
-
+               
             </select>
 
+            <p id="selection"></p>
+            <script>
+                function show_selection() {
+                    var x = document.getElementById("employee_name").value;
+                    document.getElementById("selection").innerHTML = "Welcome " + x;}
+            </script>
+
             <div></div>
-
-            <p>Welcome : </p> <!-- display name value (?)-->
-
+           
             <div>
                 <a href="timecard.html"
                     <button name="Timecard" type="button">Time Card</button>

@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Cut Sheet Functions</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut Sheet Functions</title>
+</head>
 
-    <body>
+<body>
 
-        <p>Cut sheet functions on their way....</p>
-        <p>use browsers backspace arrow to return.</p>
+    <p>Cut sheet functions on their way....</p>
+    <p>use browsers backspace arrow to return.</p>
+
+    <form action="viewchoice.html" method="GET">  
         
         <label for="sheet-select">Choose a sheet:</label>
-            <select id="sheet-select">
-                <optgroup label="Generic Systems">
-                    <option>Upflow, no coil</option>
-                    <option>Upflow, with coil</option>
-                    <option>Downflow, no coil</option>
-                    <option>Downflow, with coil</option>
-                    <option>Horizontal, no coil</option>
-                    <option>Horizontal, with coil</option>
-                </optgroup>
-                    <optgroup label="by Job Name">
-                    <option>mock blank</option>
-                    <option>mock small</option>
-                    <option>mock large</option>
-                </optgroup>
+
+            <select id="sheet-select" name="choice">
+                <option value="make">Make new sheet</option>
+                <option value="view">View existing sheet</option>
+                <option value="copy">Copy existing sheet to new</option>
+                <option value="modify">Modify existing sheet</option>
+                <option value="m1">View mockup 1</option>
+                <option value="m2">View mockup 2</option>
+                <option value="mb">View mockup blank</option>  
             </select>
 
+            <div>
+                <button>GO</button>
+            </div>
+<script>
+    document.querySelector('#choice').value
+    console.log('#choice')
+</script>
+           <p>
+               choice is: (sheet-select)
+           </p>
+
         </label>
-
-        <p>sheet-select</p>
         
-        <button disabled name="view_existing_button"    type="button">View Existing</button>
-        <button disabled name="modify_existing_button" type="button">Modify Existing</button>
+        
+        <p>sheet-select</p>
+                  
+    </form>
+        
+    <button disabled name="view_existing_button"    type="button">View Existing</button>
+    <button disabled name="modify_existing_button" type="button">Modify Existing</button>
 
-    </body>
+</body>
     
 </html>
