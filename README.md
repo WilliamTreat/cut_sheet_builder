@@ -4,3 +4,5 @@
 
 > primarily a project to learn HTML and CSS
 > 
+> evolving faster than I can document !
+>

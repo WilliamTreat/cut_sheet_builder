@@ -4,35 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Cut Sheet Builder"</title>
+    <title>"Treats Heating Employee portal"</title>
 
 </head>
 <body>
+
+    <form>
+
+       <label for="employee_name">Employee Name</label> 
+            <select id="employee_name">
+
+                <optgroup label="Installers">
+                    <option>Brad</option>
+                    <option>Chris</option>
+                    <option>Cory</option>
+                    <option>Joe</option>
+                    <option>Justin M</option>
+                    <option>Lyle</option>
+                    <option>Mark</option>
+                    <option>Noah</option>
+                    <option>Scott</option>                    
+                </optgroup>
+               
+                <optgroup label="Fabricators">
+                    <option>Bill T</option>
+                    <option>Cory</option>
+                </optgroup>
+
+                <optgroup label="sales">
+                    <option>Bill N</option>
+                    <option>Jodie</option>
+                    <option>Justin T</option>
+                </optgroup>
+
+            </select>
+
+            <div>
+                <a href="timecard.html"
+                    <button name="Timecard" type="button">Time Card</button>
+                </a>
+
+                <a href="Schedule.html"
+                    <button name="Schedule" type="button">Schedule</button>
+                </a>
     
-    <a href="cutsheetview.html"
-        <button name="creat_new_button" type="button">Creat New</button>
-    </a>
+                <a href="cutsheetview.html"
+                    <button name="creat_new_button" type="button">Creat New</button>
+                </a>
+            </div>
+            
+            <p></p>
+            
+        <label for="sheet-select">Choose a sheet:</label>
+            <select id="sheet-select">
+                <optgroup label="Generic Systems">
+                    <option>Upflow, no coil</option>
+                    <option>Upflow, with coil</option>
+                    <option>Downflow, no coil</option>
+                    <option>Downflow, with coil</option>
+                    <option>Horizontal, no coil</option>
+                    <option>Horizontal, with coil</option>
+                </optgroup>
+                <optgroup label="by Job Name">
+                    <option>mock blank</option>
+                    <option>mock small</option>
+                    <option>mock large</option>
+                </optgroup>
+            </select>
 
-    <label for="sheet-select">Choose a sheet:</label>
-        <select id="sheet-select">
-            <optgroup label="Generic Systems">
-                <option>Upflow, no coil</option>
-                <option>Upflow, with coil</option>
-                <option>Downflow, no coil</option>
-                <option>Downflow, with coil</option>
-                <option>Horizontal, no coil</option>
-                <option>Horizontal, with coil</option>
-            </optgroup>
-            <optgroup label="by Job Name">
-                <option>mock blank</option>
-                <option>mock small</option>
-                <option>mock large</option>
-            </optgroup>
-        </select>
+            <p>sheet-select</p>
+            
+        <button disabled name="view_existing_button" type="button">View Existing</button>
+        <button disabled name="modify_existing_button" type="button">Modify Existing</button>
 
-        <p>sheet-select</p>
-        
-    <button disabled name="view_existing_button" type="button">View Existing</button>
-    <button disabled name="modify_existing_button" type="button">Modify Existing</button>
+    </form>
 </body>
 </html>
