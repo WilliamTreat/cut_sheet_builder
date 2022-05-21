@@ -5,13 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mock cut sheet 1</title>
+
+  <script>
+    function show_selection() {
+        var x = document.getElementById("fitting_type").value;
+        document.getElementById("selection").innerHTML = "fitting is " + x;}
+  </script>
+
 </head>
 
 <body>
 
   <div>
     <label>Employee Name</label>
-    <input name="employee_name" hover="will be brought from page 1"> 
+    <input name="employee_name" hover="will be brought from page 1" value="(from log in)"> 
   </div>
   <div>
     <label>Job Name</label>
@@ -23,6 +30,39 @@
 
   <div></div>
   <h1>Fittings List</h1>
+
+  <label>ADD NEW FITTING</label>   
+
+  <select id="fitting_type" onchange="show_selection()" required>
+    <option></option>
+    <option>Basecan</option>
+    <option>Plenium</option>
+    <option>Duct</option>
+    <option>Transition 1 way</option>
+    <option>Transition 2 way</option>
+    <option>Transition all sides</option>
+    <option>Elbow 90 square throat</option>
+    <option>Elbow 90 radius throat</option>
+    <option>Elbow 45 square throat</option>
+    <option>Elbow 45 raduis throat</option>
+    <option>C box</option>
+    <option>Square to round</option>
+    <option>other</option>    
+  </select>
+
+  <p id="selection"></p>
+  <a href="../fittings_html/basecan.html"
+  <button name="basecan" type="button">Basecan</button>
+  </a>
+
+<div></div>
+
+  <a href="../fittings_html/elbow_90_sq.html"
+  <button name="elbow_90_sq" type="button">Elbow 90 Square Throat</button>
+  </a>
+
+
+  <p>------------------------------</p>
 
 <div>
   <p>Basecan 17.5(W) x 28(D) x 18(H)</p>
