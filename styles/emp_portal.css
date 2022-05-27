@@ -1,3 +1,47 @@
 form {
     background-color: greenyellow;
 }
+link, select, label{
+    background-color: blueviolet;
+    text-align: justify;
+    text-decoration-color: darksalmon;
+}
+.auto-spaced-linear-gradient {
+    background: linear-gradient(red, yellow, blue, orange);
+  }
+
+  .parent {
+      background-color: hsla(200, 100, 20%);
+      height: 100px;
+      width: 100px;
+      background: linear-gradient(red, yellow, blue, orange);
+  }
+
+  .child {
+      height: 50%;
+      width: 100%;
+      background: linear-gradient(red, yellow, blue, orange);
+      transition: transform 1s cubic-bezier(0.43,-0.44, 0.58, 3.67);
+    }
+
+  .parent:hover .child {
+      transform: translateX(100%);
+  }
+  .bill_parent {
+    background-color: hsla(200, 100, 20%);
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(red, yellow, blue, orange);
+}
+
+.bill_child {
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(red, yellow, blue, orange);
+    transition: transform 1s cubic-bezier(0.43,-0.44, 0.58, 3.67);
+  }
+
+
+.bill_parent:hover .child {
+    transform: translateX(100%);
+}
