@@ -31,7 +31,7 @@ link, select, label{
     background-color: hsla(200, 100, 20%);
     height: 100px;
     width: 100px;
-    background: linear-gradient(red, yellow, blue, orange);
+    background: linear-gradient(red, yellow, blue, orange);  
 }
 
 .bill_child {
@@ -39,6 +39,9 @@ link, select, label{
     width: 100%;
     background: linear-gradient(red, yellow, blue, orange);
     transition: transform 1s cubic-bezier(0.43,-0.44, 0.58, 3.67);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 
