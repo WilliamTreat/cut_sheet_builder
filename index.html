@@ -6,16 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>"Treats Heating Employee portal"</title>
   <link rel="stylesheet" href="styles/emp_portal.css"> 
-
 </head>
 
 <body>
-    
+ 
   <div class="parent">
     <div class="child">
       <img src="treats_logo.png" width="90px" height="50px">
     </div>
-
   </div>
 
   <div class="bill_parent">
@@ -24,64 +22,28 @@
     </div>
   </div>
     
-  <form>
+  <form id="myForm">
     <fieldset>
       <legend>Basic Info</legend>      
+
       <label>Name</label>
-      <!-- <label for="employee_name" >Employee Name</label>  -->
-      <!-- <select id="employee_name" onchange="show_selection()" required>
-
-              <optgroup label="Installers">
-                <option>Brad</option>
-                <option>Chris</option>
-                <option>Cory</option>
-                <option>Joe</option>
-                <option>Justin M</option>
-                <option>Lyle</option>
-                <option>Mark</option>
-                <option>Noah</option>
-                <option>Scott</option>                    
-              </optgroup>
-               
-              <optgroup label="Fabricators">
-                <option>Bill T</option>
-                <option>Cory</option>
-              </optgroup>
-
-              <optgroup label="Sales">
-                <option>Bill N</option>
-                <option>Jodie</option>
-                <option>Justin T</option>
-              </optgroup>
-               
-            </select>
-
-            <p id="selection"></p>
-            <script>
-                function show_selection() {
-                    var x = document.getElementById("employee_name").value;
-                    document.getElementById("selection").innerHTML = "Welcome " + x;}
-            </script> -->
-   
-           <input list="Name" type="text">
-        <datalist id="Name">
-          <option value="Brad">
-          <option value="Chris">
-          <option value="Cory">
-          <option value="Joe">
-          <option value="Justin M">
-          <option value="Lyle">
-          <option value="Mark">
-          <option value="Noah">
-          <option value="Scott">         
-          <option value="Bill T">
-          <option value="Bill N">
-          <option value="Jodie">
-          <option value="Justin T">
-        </datalist>
-
-      </div>
-
+    
+      <input list="Name" type="text">
+      <datalist id="Name">
+        <option value="Brad">
+        <option value="Chris">
+        <option value="Cory">
+        <option value="Joe">
+        <option value="Justin M">
+        <option value="Lyle">
+        <option value="Mark">
+        <option value="Noah">
+        <option value="Scott">         
+        <option value="Bill T">
+        <option value="Bill N">
+        <option value="Jodie">
+        <option value="Justin T">
+      </datalist>
 
       <div><div>
 
@@ -96,16 +58,20 @@
       </datalist>
 
       <div>
-        <label>Date</label>     
+        <label>Date and Time</label>     
           <input type="date">
           <input type="time">
       </div>
   
       <div>
-        <label>Color of H<sub>2</sub>O</label>
+        <label>Color of B<sub>a</sub>c<sup>k</sup>g<sub>r</sub>o<sup>u</sup>n<sub>d</sub></label>
      
-        <input name="colorchoice" type="color">
-        <!-- <style> form { background-color: currentcolor; }</style> -->
+    
+        <!-- <input type="color" id="colorChoice" onchange="changeColor()">  -->
+        <input type="color" id="colorChoice">
+        <input type="button" id="changeColor" value="click to change" onclick="changeColor()">
+
+       
       </div>
             
     </fieldset>
@@ -136,12 +102,19 @@
       </a>
 
     </div>
-            
-    <p></p>
-            
-      </label>
-        
+
   </form>
+
+  <!-- not working !!!!!!! -->
+  <script>
+    function changeColor() {
+      let color = document.getElementById('colorChoice').value;
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+  </script>
+
 
 </body>
 

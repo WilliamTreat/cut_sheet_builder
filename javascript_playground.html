@@ -9,20 +9,43 @@ Last name: <input id="last_name">
 <button id="say">Say hi!</button>
  
 <hr>
+
 <div id="result"></div>
  
 <script>
-function say_hi() {
+
+  function say_hi() {
     var fname = document.getElementById('first_name').value;
     var lname = document.getElementById('last_name').value;
- 
     var html = 'Hello <b>' + fname + '</b> ' + lname;
- 
     document.getElementById('result').innerHTML = html;
-}
+  }
  
-document.getElementById('say').addEventListener('click', say_hi);
+  document.getElementById('say').addEventListener('click', say_hi);
+
 </script>
- 
+
+
+
+Pick Color: <input id="colorChoice" type=color>
+<button id="choice">Show color!</button>
+
+<hr>
+<div id="color"></div>
+
+<script>
+
+  function show_color() {
+    var color = document.getElementById('colorChoice').value;
+    document.getElementById('color').innerHTML = color;
+  }
+
+  document.getElementById('choice').addEventListener('click', show_color);
+  
+</script>
+
+
+
 </body>
 </html>
+ 
