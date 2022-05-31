@@ -27,8 +27,8 @@ Last name: <input id="last_name">
 
 
 
-Pick Color: <input id="colorChoice" type=color>
-<button id="choice">Show color!</button>
+Pick Color: <input id="colorChoice" type=color value=#ff8000>
+<input type=button id="choice" value="show color" onclick="show_color()">
 
 <hr>
 <div id="color"></div>
@@ -36,12 +36,11 @@ Pick Color: <input id="colorChoice" type=color>
 <script>
 
   function show_color() {
-    var color = document.getElementById('colorChoice').value;
+    let color = document.getElementById('colorChoice').value;
     document.getElementById('color').innerHTML = color;
+    document.body.style.backgroundColor = color;
   }
 
-  document.getElementById('choice').addEventListener('click', show_color);
-  
 </script>
 
 
