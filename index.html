@@ -64,14 +64,9 @@
       </div>
   
       <div>
-        <label>Color of B<sub>a</sub>c<sup>k</sup>g<sub>r</sub>o<sup>u</sup>n<sub>d</sub></label>
-     
-    
-        <!-- <input type="color" id="colorChoice" onchange="changeColor()">  -->
+        <label>Color of B<sub>a</sub>c<sup>k</sup>g<sub>r</sub>o<sup>u</sup>n<sub>d</sub></label>    
         <input type="color" id="colorChoice">
-        <input type="button" id="changeColor" value="click to change" onclick="changeColor()">
-
-       
+        <input type="button" value="click to change" onclick="changeColor()">       
       </div>
             
     </fieldset>
@@ -105,19 +100,12 @@
 
   </form>
 
-  <!-- not working !!!!!!! 
-  check out javascript playground link, it works there
-  this function is called by line 72 button onclick event-->
-
   <script>
     function changeColor() {
       let color = document.getElementById('colorChoice').value;
       document.body.style.backgroundColor = color;
     }
   </script>
-
-  </script>
-
 
 </body>
 
