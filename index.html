@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>"Treats Heating Employee portal"</title>
   <link rel="stylesheet" href="styles/emp_portal.css"> 
+ 
 </head>
 
 <body>
@@ -68,7 +69,11 @@
         <input type="color" id="colorChoice">
         <input type="button" value="click to change" onclick="changeColor()">       
       </div>
-            
+
+      <p id="demo"></p>
+    
+      <input type="button" value="Confirm" onclick="confirmColor()">  
+
     </fieldset>
 
     <div></div>
@@ -108,10 +113,34 @@
   </form>
 
   <script>
+
     function changeColor() {
-      let color = document.getElementById('colorChoice').value;
-      document.body.style.backgroundColor = color;
-    }
+
+      // leave off the "let" from next line should make it global but NOOOOOO
+
+      color = document.getElementById('colorChoice').value;
+      oldcolor = document.body.style.backgroundColor.value;
+
+      let whatcolor = prompt("What would you call this color", "color");
+      if (whatcolor != "") {
+        document.getElementById("demo").innerHTML =
+        "This color is " + whatcolor + "!";
+        document.body.style.backgroundColor = color; }
+     }
+
+    function confirmColor () {
+
+      oldcolor = color;
+      
+      if (confirm("Do you want to keep this?") == true) {
+         alert("I think is nice TOO !"); 
+         document.body.style.backgroundColor = color; }
+        //  can't get this to work !!!
+      else {
+        let oldcolor = color;
+        document.body.style.backgroundColor = oldcolor; }  
+      }
+  
   </script>
 
 </body>
