@@ -114,30 +114,34 @@
 
   <script>
 
+    let oldcolor = document.body.style.backgroundColor;
+
     function changeColor() {
-
-      // leave off the "let" from next line should make it global but NOOOOOO
-
       color = document.getElementById('colorChoice').value;
-      oldcolor = document.body.style.backgroundColor.value;
-
-      let whatcolor = prompt("What would you call this color", "color");
-      if (whatcolor != "") {
-        document.getElementById("demo").innerHTML =
-        "This color is " + whatcolor + "!";
-        document.body.style.backgroundColor = color; }
-     }
+    
+      let whatcolor = prompt("What would you call this color", "");
+      if (whatcolor != null) {
+        if (whatcolor != "") {
+          document.getElementById("demo").innerHTML =
+          "This color is " + whatcolor + "!";
+          document.body.style.backgroundColor = color; 
+        }      
+        else {
+          alert("Needs a name");
+          }
+        }
+      }
 
     function confirmColor () {
 
-      oldcolor = color;
-      
       if (confirm("Do you want to keep this?") == true) {
-         alert("I think is nice TOO !"); 
-         document.body.style.backgroundColor = color; }
-        //  can't get this to work !!!
+        alert("I think it's nice too!"); 
+        document.body.style.backgroundColor = color;
+        oldcolor = color;
+      }
+      
       else {
-        let oldcolor = color;
+        alert("I thought that was bad too!"); 
         document.body.style.backgroundColor = oldcolor; }  
       }
   
