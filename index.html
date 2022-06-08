@@ -114,6 +114,33 @@
 
   <script>
 
+    // from function lessons, 
+    // was sure it wouldn't work
+    // mind bender but i see it. added var j to see value of i (local to function)
+var j;
+function foo(i) {
+  if (i < 0)
+    return;
+  console.log('begin: ' + i);
+  foo(i - 1);
+  console.log('end: ' + i);
+  j = i;
+}
+foo(3);
+// output \/
+  // begin: 3
+  // begin: 2
+  // begin: 1
+  // begin: 0
+  // end: 0
+  // end: 1
+  // end: 2
+  // end: 3
+
+console.log(j); //expect this to be 0 !!! oops, i is never decremented, it's still 3
+
+  // too cool!
+
     let oldcolor = document.body.style.backgroundColor;
 
     function changeColor() {
