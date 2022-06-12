@@ -1,0 +1,32 @@
+
+
+.hour_marker {
+  fill: transparent;
+  stroke: #0c0c0b;
+  stroke-width: 7;
+  stroke-dasharray: 0.2, 4.8;
+  stroke-dashoffset: 0.1;
+}
+.minute_marker {
+  fill: transparent;
+  stroke: #c07010;
+  stroke-width: 7;
+  stroke-dasharray: 0.2, 0.8;
+  stroke-dashoffset: 0.1;
+}
+.hand {
+  stroke: aqua;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.hand_thick {
+stroke-width: 7;
+}
+.hand_second {
+  stroke: rgb(46, 225, 18);
+}
+.center {
+  fill:rgb(174, 139, 78);
+  stroke-width: 2;
+  stroke: white;
+}
