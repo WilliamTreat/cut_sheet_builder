@@ -5,6 +5,10 @@ const dummy_data = [
   { id: 'd4', value: 6, region: 'Germany' },
 ];
 
+const xScale = d3.scaleBand().domain(dummy_data.map((dataPoint) => dataPoint.region)).rangeRound([0,250]).padding(0.1);
+const yScale = d3.scaleLinear().domain([0,15]).range([200, 0]);
+
+
 const container = d3.select('svg')
   .classed('container', true);
 
@@ -14,7 +18,9 @@ const bar = container
   .enter()
   .append('rect')
   .classed('bar', true)
-  .attr('width', '50')
-  .attr('height', data => (data.value * 15));
+  .attr('width', xScale.bandwidth())
+  .attr('height', (data) => 200 - yScale(data.value))
+  .attr('x', data => xScale(data.region))
+  .attr('y', data => yScale(data.value));
 
 
