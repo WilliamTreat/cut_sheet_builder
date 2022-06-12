@@ -5,7 +5,11 @@ const dummy_data = [
   { id: 'd4', value: 6, region: 'Germany' },
 ];
 
-const xScale = d3.scaleBand().domain(dummy_data.map((dataPoint) => dataPoint.region)).rangeRound([0,250]).padding(0.1);
+const xScale = d3.scaleBand()
+  .domain(dummy_data.map((dataPoint) => dataPoint.region))
+  .rangeRound([0, 250])
+  .padding(0.1);
+
 const yScale = d3.scaleLinear().domain([0,15]).range([200, 0]);
 
 
