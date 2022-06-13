@@ -6,14 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clock</title>
   <link rel="stylesheet" href="styles/clock.css"> 
-
+  <link rel="shortcut icon" href="#">
 </head>
 <body>
 
-  <svg width="200" height="200" viewBox="-100 -100 200 200">
+  <svg width="500" height="500" viewBox="-150 -150 300 300">
 
     <circle class="minute_marker" cx="0" cy="0" r="90" pathlength="60" />
     <circle class="hour_marker" cx="0" cy="0" r="90" pathlength="60" />
+
+    <text id="text" class="text" x="45" y="5">00</text>
+
+    <!-- hour numbers -->
+    <text id="text" class="text" x="0" y="-100">12</text>
+    <text id="text" class="text" x="50" y="-85">1</text>
+    <text id="text" class="text" x="90" y="-50">2</text>
+    <text id="text" class="text" x="105" y="05">3</text>
+    <text id="text" class="text" x="90" y="60">4</text>
+    <text id="text" class="text" x="55" y="95">5</text>
+    <text id="text" class="text" x="0" y="110">6</text>
+    <text id="text" class="text" x="-55" y="95">7</text>
+    <text id="text" class="text" x="-90" y="60">8</text>
+    <text id="text" class="text" x="-105" y="05">9</text>
+    <text id="text" class="text" x="-95" y="-50">10</text>
+    <text id="text" class="text" x="-55" y="-85">11</text>
 
     <g id="hour_hand">
       <line class="hand" x1="0" y1="0" x2="0" y2="-50" />

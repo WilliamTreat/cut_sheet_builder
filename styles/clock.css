@@ -1,4 +1,8 @@
+body {
+  background-color: tan;
+  margin: 0;
 
+}
 
 .hour_marker {
   fill: transparent;
@@ -29,4 +33,12 @@ stroke-width: 7;
   fill:rgb(174, 139, 78);
   stroke-width: 2;
   stroke: white;
+}
+
+.text {
+  fill: #421bcf;
+  font-family: "Arial", sans-serif;
+  text-anchor: middle;
+  cursor: pointer;
+  user-select: none;
 }
